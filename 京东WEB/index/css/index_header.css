@@ -1,0 +1,119 @@
+body {
+	background-color: #fff;
+	text-decoration: none;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.dp-inlinebk {
+	display: inline-block;
+}
+
+.font-s16 {
+	font-size: 16px;
+}
+
+#header {
+	z-index: 200;
+	max-width: 640px;
+	min-width: 320px;
+	height: 40px;
+	/*opacity: 0.1;*/
+	/*background: #CF3642;*/
+	position: fixed;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#main {
+	min-width: 320px;
+	max-width: 640px;
+	position: relative;
+	margin: 0 auto;
+	/*background-color: #F0F2F5;*/
+	overflow: hidden;
+}
+
+
+
+@media only screen and (max-width: 550px) {
+	#main input {
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 524px) {
+	#main input {
+		width: 350px;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	#main input {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 424px) {
+	#main input {
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 372px) {
+	#main input {
+		width: 200px;
+	}
+}
+
+.login-top {
+	margin-right: 10px;
+	vertical-align: middle;
+	color: white;
+}
+
+.login-top:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.login-top:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.search-box {
+	border: none;
+	border-radius: 15px;
+	height: 30px;
+	margin-top: -5px;
+	margin-left: 70px;
+	width: 80%;
+}
+
+#jd_logo {
+	background: url(../img/jd-sprites.png) no-repeat 0 -109px;
+	width: 59px;
+	height: 21px;
+	background-size: 200px 200px;
+	margin-left: 5px;
+}
+
+
+/*.search-div{
+	
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: none;
+	background-color: white;
+	
+}
+
+.search_icon{
+	position: absolute;
+	top: 12px;
+	margin-left: 5px;
+	z-index: 10;
+}*/
