@@ -69,9 +69,9 @@ function query(response) {
 
     });*/
     /*connection.query('delete from emp where empno = 8000');*/
-    connection.query('update emp set sal = 0 where upper(ename)= "KING"',function (err) {
+    /*connection.query('update emp set sal = 0 where upper(ename)= "KING"',function (err) {
         if (err) throw err;
         console.log('emp表更新成功');
-    })
+    })*/
     connection.end();
 }
