@@ -126,7 +126,7 @@ http.createServer(function(req,res){
 
 
 
-).listen(80);
+).listen(8090);
 
 console.log('服务器启动成功');
 
