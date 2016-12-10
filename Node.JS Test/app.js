@@ -12,7 +12,7 @@ http.createServer(function (request,response) {
     
     if(pathname.endsWith('.html')||pathname.endsWith('.js')) load(pathname,response);
     else if(pathname == '/query') query(response);
-}).listen(80);
+}).listen(8090);
 
 
 function sql_print(content) {
