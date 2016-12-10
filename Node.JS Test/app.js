@@ -11,7 +11,7 @@ http.createServer(function (request,response) {
     console.log(pathname);
     
     if(pathname.endsWith('.html')||pathname.endsWith('.js')) load(pathname,response);
-    else if(pathname == '/query') query(response);
+    // else if(pathname == '/query') query(response);
 }).listen(8090);
 
 
