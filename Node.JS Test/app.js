@@ -40,16 +40,16 @@ if (typeof String.prototype.endsWith != 'function') {
     };
 }
 
-function query(response) {
-    const mysql = require('mysql');
-    var connection = mysql.createConnection({
-        host:'localhost',
-        user:'root',
-        password:'',
-        database:'mydb'
-    });
-
-    connection.connect();
+// function query(response) {
+//     const mysql = require('mysql');
+//     var connection = mysql.createConnection({
+//         host:'localhost',
+//         user:'root',
+//         password:'',
+//         database:'mydb'
+//     });
+//
+//     connection.connect();
     /*connection.query('select * from emp',function (err,rows,fields) {
      if(err) throw err;
      var length = rows.length;
@@ -73,5 +73,5 @@ function query(response) {
         if (err) throw err;
         console.log('emp表更新成功');
     })*/
-    connection.end();
-}
+//     connection.end();
+// }
