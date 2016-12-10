@@ -10,7 +10,7 @@ http.createServer(function (request,response) {
     var pathname = url.parse(request.url).pathname;
     console.log(pathname);
     
-    if(pathname.endsWith('.html')||pathname.endsWith('.js')) load(pathname,response);
+    if(pathname.endsWith('.html')||pathname.endsWith('.js')||pathname.endsWith('.ico')) load(pathname,response);
     // else if(pathname == '/query') query(response);
 }).listen(8090);
 
