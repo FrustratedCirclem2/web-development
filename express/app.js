@@ -1,28 +1,22 @@
-/**
- * Created by Administrator on 2016/12/13.
- */
 const express = require('express');
+var app = express();
 
-var app = new express();
-app.listen(80,function () {
-   console.log('服务器启动成功');
-})
-
-/*app.get('/ab?cd',function (req,res,next) {
-    res.send('ab?cd');//?重复0或1次前面的一个字符
-});*/
-/*app.get('/ab+cd',function (req,res,next) {
-    res.send('ab+cd');//+重复1或多次前面的一个字符
-});*/
-/*
-app.get('/ab*cd',function (req,res,next) {
-    res.send('ab*cd');//!*表示任意多个字符
+/**
+ * 中间件是通过use或者method(get,post,put,delete)来调用的
+ */
+app.listen(80, function () {
+    console.log('服务器启动成功，正在监听80端口');
 });
-*/
-/*app.get('/ab?cd',function (req,res,next) {
-    res.send('ab?cd');//?重复0或一次前面的一个字符
-});*/
-app.get(/a/,function (req,res,next) {
-    res.send('/a/');
-})
+//应用级中间件
+app.use('/student', function (req, res, next) {
+    console.log('第一个中间件');
+   next();
+});
+app.use('/student', function (req, res, next) {
+    console.log('第二个中间件');
+    next();
+});
+app.get('/student',function (req, res, nex) {
+   res.send('Student Home');
+});
 
