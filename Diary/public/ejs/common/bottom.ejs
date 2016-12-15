@@ -1,0 +1,57 @@
+		</div>
+		<div class="span3">
+			<div class="data_list">
+				<div class="data_list_title">
+					<img src="/img/user_icon.png"/>
+					个人中心
+				</div>
+				<div class="user_image">
+					<img src="/faces/<%=imageName%>"/>
+				</div>
+				<div class="nickName"><%=nickName%></div>
+				<div class="userSign">(<%=userSign%>)</div>
+			</div>
+			
+			<div class="data_list">
+				<div class="data_list_title">
+					<img src="/img/byType_icon.png"/>
+					按日志类别
+				</div>
+				<div class="datas">
+					<ul>
+						<%
+							var tmp;
+							for(var i=0;i<byCategory.length;i++){
+								tmp = byCategory[i];
+						%>
+							<li><span><a href="main?s_typeId=<%=tmp['diaryTypeId']%>"><%=tmp['name']%>(<%=tmp['num']%>)</a></span></li>
+						<%
+							}
+						%>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="data_list">
+				<div class="data_list_title">
+					<img src="/img/byDate_icon.png"/>
+					按日志日期
+				</div>
+				<div class="datas">
+					<ul>
+						<%
+							for(var i=0;i<byMonth.length;i++){
+								tmp = byMonth[i];
+						%>
+							<li><span><a href="main?s_releaseDateStr=<%=tmp['rd']%>"><%=tmp['rd']%>(<%=tmp['num']%>)</a></span></li>
+						<%
+							}
+						%>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

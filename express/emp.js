@@ -22,7 +22,9 @@ router.get('/new',function (req,res) {
 module.exports = router;*/
 var express = require('express');
 var router = express.Router();
-
+var bodyParse = require('body-parser');
+var fs = require('fs');
+var urlencodedParser = bodyParse.urlencoded({extended:false});
 // middleware that is specific to this router
 router.use(function timeLog (req, res, next) {
     console.log('Time: ', Date.now());
@@ -37,4 +39,17 @@ router.get('/about', function (req, res) {
     res.send('About birds')
 });
 
+router.get('/login',urlencodedParser,function (req,res) {
+    fs.readFile('./views/test.html',function (err,data) {
+        if (err) throw err;
+        res.write(data);
+    });
+
+});
+
+router.post('/login1',urlencodedParser,function (req,res) {
+    user = req.body.user;console.log(user);
+    pass = req.body.pass;console.log(pass);
+    res.send(user+','+pass);
+});
 module.exports = router;
