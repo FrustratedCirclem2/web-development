@@ -1,0 +1,26 @@
+<% include ./common/top.ejs %>
+<div class="data_list">
+		<div class="data_list_title">
+		<img src="/img/list_icon.png"/>
+		日记列表</div>
+		<div class="diary_datas">
+			<ul>
+				<% 
+					var tmp;
+					for(var i=0;i<diaries.length;i++){
+						tmp = diaries[i];
+				%>
+					<li>『<%=tmp['releaseDate']%>』<span>&nbsp;<a href="/main/show?diaryId=<%=tmp['diaryId']%>"><%=tmp['title']%></a></span></li>
+				<%
+					}
+				%>
+				
+			</ul>
+		</div>
+		<div class="pagination pagination-centered">
+			<ul>
+				<%-pagination%>
+			</ul>
+		</div>
+</div>
+<% include ./common/bottom.ejs %>

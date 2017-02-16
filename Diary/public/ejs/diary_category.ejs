@@ -1,0 +1,79 @@
+<% include ./common/top.ejs %>
+
+<script type="text/javascript">
+	function diaryTypeDelete(diaryTypeId){
+		if(confirm("您确定要删除这个日志类别吗？")){
+			window.location="diaryType?action=delete&diaryTypeId="+diaryTypeId;
+		}
+	}
+</script>
+<div class="data_list">
+		<div class="data_list_title">
+		<img src="/img/list_icon.png"/>
+		日记类别列表
+		<span class="diaryType_add">
+			<button class="btn btn-mini btn-success" type="button" onclick="javascript:window.location='/type/new'">添加日志类别</button>
+		</span>
+		</div>
+		<div>
+			<table class="table table-hover table-striped">
+			  <tr>
+			  	<th>编号</th>
+			  	<th>类别名称</th>
+			  	<th>操作</th>
+			  </tr>
+			  
+			  	<tr>
+			  		<td>1</td>
+			  		<td>工作类</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=1'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=1'">删除</button></td>
+			  	</tr>
+			  
+			  	<tr>
+			  		<td>2</td>
+			  		<td>生活类</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=2'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=2'">删除</button></td>
+			  	</tr>
+			  
+			  	<tr>
+			  		<td>3</td>
+			  		<td>学习类</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=3'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=3'">删除</button></td>
+			  	</tr>
+			  
+			  	<tr>
+			  		<td>4</td>
+			  		<td>人生感叹</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=4'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=4'">删除</button></td>
+			  	</tr>
+			  
+			  	<tr>
+			  		<td>5</td>
+			  		<td>测试</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=5'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=5'">删除</button></td>
+			  	</tr>
+			  
+			  	<tr>
+			  		<td>6</td>
+			  		<td>AB</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=6'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=6'">删除</button></td>
+			  	</tr>
+			  
+			  	<tr>
+			  		<td>7</td>
+			  		<td>是</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=7'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=7'">删除</button></td>
+			  	</tr>
+			  
+			  	<tr>
+			  		<td>8</td>
+			  		<td>试用</td>
+			  		<td><button class="btn btn-mini btn-info" type="button" onclick="javascript:window.location='/type/edit?diaryTypeId=8'">修改</button>&nbsp;<button class="btn btn-mini btn-danger" type="button" onclick="javascript:window.location='/type/delete?diaryTypeId=8'">删除</button></td>
+			  	</tr>
+			  
+			</table>
+		</div>
+		<div align="center"><font color="red"></font></div>
+</div>
+
+<% include ./common/bottom.ejs %>

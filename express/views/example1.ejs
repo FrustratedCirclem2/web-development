@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<input type="button" value="get" id="get">
+<input type="button" value="post" id="post">
+<input type="button" value="put" id="put">
+<input type="button" value="delete" id="delete">
+</body>
+<script>
+    $('#get').click(function () {
+        $.ajax({
+            type: 'get',
+            url: '/emp',
+            success: function () {
+                alert(1);
+            }
+        });
+    });
+
+    $('#post').click(function () {
+        $.ajax({
+            type: 'post',
+            url: '/emp',
+            success: function () {
+                alert(1);
+            }
+        });
+    });
+
+    $('#put').click(function () {
+        $.ajax({
+            type: 'put',
+            url: '/emp',
+            success: function () {
+                alert(1);
+            }
+        });
+    });
+
+    $('#delete').click(function () {
+        $.ajax({
+            type: 'delete',
+            url: '/emp',
+            success: function () {
+                alert(1);
+            }
+        });
+    });
+</script>
+</html>

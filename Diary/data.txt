@@ -1,0 +1,14 @@
+用户登录：
+SELECT userId, userName, nickName, imageName, mood FROM t_user WHERE userName='test' AND password=md5('1234');
+
+按日志类别：
+SELECT dt.diaryTypeId AS diaryTypeId, dt.typeName AS name, COUNT(d.diaryId) AS num FROM t_diarytype dt LEFT JOIN t_diary d ON dt.diaryTypeId=d.typeId GROUP BY dt.typeName, d.typeId
+
+按日志日期
+SELECT DATE_FORMAT(releaseDate, '%Y年%m月') AS rd, COUNT(diaryId) AS num FROM t_diary GROUP BY rd ORDER BY releaseDate DESC;
+
+日志的列表
+SELECT * FROM t_diary ORDER BY releaseDate DESC LIMIT 0, 4
+
+最大页码
+SELECT CEIL(COUNT(diaryId)/4) AS pages FROM t_diary;
