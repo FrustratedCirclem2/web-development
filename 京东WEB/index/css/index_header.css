@@ -17,12 +17,12 @@ body {
 
 #header {
 	z-index: 200;
-	max-width: 640px;
-	min-width: 320px;
+	width: 640px;
+	position: fixed;
 	height: 40px;
 	/*opacity: 0.1;*/
-	/*background: #CF3642;*/
-	position: fixed;
+	background: #CF3642;
+
 	margin: 0 auto;
 	overflow: hidden;
 }
